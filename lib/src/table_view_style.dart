@@ -147,6 +147,11 @@ class TableViewHorizontalDividersStyle {
 /// Defines a display style of a particular horizontal divider of a table.
 @immutable
 class TableViewHorizontalDividerStyle extends DividerThemeData {
+  @override
+  // For backward compatibility with Flutter 3.32.x or lower.
+  // ignore: override_on_non_overriding_member, overridden_fields
+  final BorderRadiusGeometry? radius;
+
   const TableViewHorizontalDividerStyle({
     this.enabled = true,
     super.color,
@@ -154,7 +159,7 @@ class TableViewHorizontalDividerStyle extends DividerThemeData {
     super.space,
     super.indent,
     super.endIndent,
-    super.radius,
+    this.radius,
   })  : assert(thickness == null || thickness >= 0),
         assert(space == null || space >= 0),
         assert(indent == null || indent >= 0),
