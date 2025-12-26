@@ -1,3 +1,7 @@
+## 5.5.3
+- Fixed incompatibility with Flutter 3.32.x or lower.
+- Added `horizontalScrollKey` and `verticalScrollKey` to `TableViewController`.
+
 ## 5.5.2
 - Fixed incompatibility with Flutter 3.35.
 - Added constraint on Flutter version >=3.35.0.
